@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+
+    $title = 'Laravel primi passi';
+
+    $teachers = [
+        'Adriano',
+        'Luigi',
+        'Giuseppe'
+    ];
+    
+
+    return view('home', compact('title', 'teachers'));
+})->name('homepage');
